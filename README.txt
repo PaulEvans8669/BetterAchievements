@@ -38,6 +38,7 @@ Major
 
 Possibly Make money rewards.
 Add Config file making potion effects configurable.
+Add config file to set up the awards for each achievements.
 
 
 Minor
