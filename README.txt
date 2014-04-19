@@ -36,7 +36,8 @@ Other TODO
 
 Major
 
-Possibly Make money rewards.
+Possibly Make money/experience
+rewards.
 Add Config file making potion effects configurable.
 Add config file to set up the awards for each achievements.
 
