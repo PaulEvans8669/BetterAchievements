@@ -14,11 +14,11 @@ import org.bukkit.potion.PotionEffectType;
 
 public class Events implements Listener{
 
-	public Main plugin;
++	public Main plugin;
 	
-	public Events(Main plugin){
-		this.plugin = plugin;
-		}	
++	public Events(Main plugin){
++		this.plugin = plugin;
++		}	
 
 	@EventHandler(priority = EventPriority.NORMAL)
 	public void onPlayerAchievementAwarded(PlayerAchievementAwardedEvent AwEv){
