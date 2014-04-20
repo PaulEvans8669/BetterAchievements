@@ -23,7 +23,7 @@ public class Main extends JavaPlugin{
 			log.severe(String.format("[%s] - Economy Disabled due to no Vault dependency found!", getDescription().getName()));
 			return;
 		}else{
-			ecoworks = true
+			ecoworks = true;
 		}
 
 
