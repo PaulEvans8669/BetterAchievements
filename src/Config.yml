@@ -1,0 +1,31 @@
+#Default Configuration File For BetterAchievements
+#_____________________
+#EXAMPLE CONFIGURATION
+#
+#Config:
+#	Frstpot:
+#		effect:JUMP
+#		time:2400  Time is in ticks.  1 tick  =  20 seconds      1200 tick  =  1 Minutes
+#		level:1
+#	Secondpot:
+#		effect:SPEED
+#		time:1200
+#		level:2
+#
+
+
+
+#_____________
+#CONFIGURATION
+#
+
+
+Config:
+	Frstpot:
+		effect:
+		time:
+		level:
+	Secondpot:
+		effect:
+		time:
+		level:
