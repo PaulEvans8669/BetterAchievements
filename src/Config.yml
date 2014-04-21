@@ -20,12 +20,12 @@
 #
 
 
-Config:
-	Frstpot:
-		effect:
-		time:
-		level:
-	Secondpot:
-		effect:
-		time:
-		level:
+
+Frstpot:
+#  effect: (Temp. Unusable
+  time: 2400
+  level: 1
+Secondpot:
+#  effect:
+  time: 2400
+  level: 1
