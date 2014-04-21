@@ -2,10 +2,7 @@ package com.gmail.amatokus8669.plugin.betterachievements;
 
 
 import java.util.logging.Logger;
-
 import net.milkbowl.vault.economy.Economy;
-
-import org.bukkit.event.Listener;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -15,6 +12,7 @@ public class Main extends JavaPlugin{
 
 	  private static final Logger log = Logger.getLogger("Minecraft");
 	  public static Economy econ = null;
+	  private boolean ecoworks = false;
 
 
 
@@ -22,10 +20,11 @@ public class Main extends JavaPlugin{
 	public void onEnable(){
 
 		if (!setupEconomy() ) {
-			log.severe(String.format("[%s] - Disabled due to no Vault dependency found!", getDescription().getName()));
-			getServer().getPluginManager().disablePlugin(this);
+			log.severe(String.format("[%s] - Economy Disabled due to no Vault dependency found!", getDescription().getName()));
 			return;
-			}
+		}else{
+			ecoworks = true;
+		}
 
 
 		this.getServer().getPluginManager().registerEvents(new Events(null), this);
