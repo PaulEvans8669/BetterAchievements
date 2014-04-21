@@ -18,6 +18,13 @@ public class Main extends JavaPlugin{
 
 	  @Override  
 	public void onEnable(){
+		if(!getDataFolder().exists()){
+			getDataFolder().mkdir();
+		}
+		File configFile = new File(this.getDataFolder() + "/config.yml");
+		if(!configFile.exists()){
+			this.saveDefaultConfig();
+		}
 
 		if (!setupEconomy() ) {
 			log.severe(String.format("[%s] - Economy Disabled due to no Vault dependency found!", getDescription().getName()));
