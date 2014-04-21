@@ -29,8 +29,8 @@ public class Events implements Listener{
 		
 		AwEv.getPlayer().sendMessage(ChatColor.AQUA+""+ChatColor.BOLD+"Congratulations"+ChatColor.GOLD+" "+name+ChatColor.AQUA+"!"+ChatColor.BOLD+" "+"You earned an achievement!"+ChatColor.WHITE);
 		AwEv.getPlayer().playSound(location, Sound.LEVEL_UP, 10.0F, 0);
-		AwEv.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 2400, 1));
-		AwEv.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 2400, 1));
+		AwEv.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.SPEED, plugin.getConfig().getInt("Firstpot.time"), plugin.getConfig().getInt("Firstpot.level")));
+		AwEv.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.JUMP,plugin.getConfig().getInt("Firstpot.time"), plugin.getConfig().getInt("Firstpot.level")));
 		AwEv.getPlayer().sendMessage(ChatColor.AQUA+"The potion effect"+ChatColor.GOLD+ChatColor.ITALIC+" "+"Speed"+" "+ChatColor.RESET+ChatColor.AQUA+"has been given to you for two minutes!"+ChatColor.WHITE);
 		AwEv.getPlayer().sendMessage(ChatColor.AQUA+"The potion effect"+ChatColor.GOLD+ChatColor.ITALIC+" "+"Jump"+" "+ChatColor.RESET+ChatColor.AQUA+"has been given to you for two minutes!"+ChatColor.WHITE);
 	}
