@@ -1,7 +1,10 @@
 package com.gmail.amatokus8669.plugin.betterachievements;
 
+import java.io.File;
 import java.util.logging.Logger;
+
 import net.milkbowl.vault.economy.Economy;
+
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.RegisteredServiceProvider;
@@ -15,6 +18,14 @@ public class Main extends JavaPlugin {
 
 	@Override
 	public void onEnable() {
+
+		if (!getDataFolder().exists()) {
+			getDataFolder().mkdir();
+		}
+		File configFile = new File(this.getDataFolder() + "/config.yml");
+		if (!configFile.exists()) {
+			this.saveDefaultConfig();
+		}
 
 		this.getConfig().addDefault("config.firstpot.effect", "JUMP");
 		this.getConfig().addDefault("config.firstpot.time", 2400);
