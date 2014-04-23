@@ -2,12 +2,12 @@
 #_____________________
 #EXAMPLE CONFIGURATION
 #
-#Config:
-#	Frstpot:
+#config:
+#	frstpot:
 #		effect:JUMP
 #		time:2400  Time is in ticks.  1 tick  =  20 seconds      1200 tick  =  1 Minutes
 #		level:1
-#	Secondpot:
+#	secondpot:
 #		effect:SPEED
 #		time:1200
 #		level:2
@@ -21,11 +21,12 @@
 
 
 
-Firstpot:
-#  effect: (Temp. Unusable
-  time: 2400
-  level: 1
-Secondpot:
-#  effect:
-  time: 2400
-  level: 1
+config:
+    firstpot:
+        effect: JUMP
+        time: 2400
+        level: 1
+    secondpot:
+        effect: SPEED
+        time: 1200
+        level: 2
