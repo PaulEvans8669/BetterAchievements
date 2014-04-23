@@ -19,25 +19,6 @@ public class Main extends JavaPlugin {
 	@Override
 	public void onEnable() {
 
-		if (!getDataFolder().exists()) {
-			getDataFolder().mkdir();
-		}
-		File configFile = new File(this.getDataFolder() + "/config.yml");
-		if (!configFile.exists()) {
-			this.saveDefaultConfig();
-		}
-
-		this.getConfig().addDefault("config.firstpot.effect", "JUMP");
-		this.getConfig().addDefault("config.firstpot.time", 2400);
-		this.getConfig().addDefault("config.firstpot.level", 1);
-
-		this.getConfig().addDefault("config.secondpot.effect", "SPEED");
-		this.getConfig().addDefault("config.secondpot.time", 1200);
-		this.getConfig().addDefault("config.secondpot.level", 2);
-
-		this.getConfig().options().copyDefaults(true);
-		this.saveConfig();
-
 		if (!setupEconomy()) {
 			log.severe(String
 					.format("[%s] - Economy Disabled due to no Vault dependency found!",
