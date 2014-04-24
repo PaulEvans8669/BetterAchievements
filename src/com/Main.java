@@ -1,10 +1,7 @@
 package com.gmail.amatokus8669.plugin.betterachievements;
 
-import java.io.File;
 import java.util.logging.Logger;
-
 import net.milkbowl.vault.economy.Economy;
-
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.RegisteredServiceProvider;
@@ -19,6 +16,7 @@ public class Main extends JavaPlugin {
 	@Override
 	public void onEnable() {
 
+		this.saveDefaultConfig();
 		if (!setupEconomy()) {
 			log.severe(String
 					.format("[%s] - Economy Disabled due to no Vault dependency found!",
