@@ -15,7 +15,7 @@ public class Events implements Listener {
 
 	JavaPlugin plugin;
 
-	public Events(JavaPlugin plugin) {
+	public Events(Main plugin) {
 		this.plugin = plugin;
 	}
 
@@ -42,14 +42,24 @@ public class Events implements Listener {
 						.getConfig().getInt("config.secondpot.time"), plugin
 						.getConfig().getInt("config.secondpot.level")));
 		event.getPlayer().sendMessage(
-				ChatColor.AQUA + "The potion effect" + ChatColor.GOLD
-						+ ChatColor.ITALIC + " " + "Speed" + " "
+				ChatColor.AQUA
+						+ "The potion effect"
+						+ ChatColor.GOLD
+						+ ChatColor.ITALIC
+						+ " "
+						+ plugin.getConfig()
+								.getString("config.firstpot.effect") + " "
 						+ ChatColor.RESET + ChatColor.AQUA
 						+ "has been given to you for two minutes!"
 						+ ChatColor.WHITE);
 		event.getPlayer().sendMessage(
-				ChatColor.AQUA + "The potion effect" + ChatColor.GOLD
-						+ ChatColor.ITALIC + " " + "Jump" + " "
+				ChatColor.AQUA
+						+ "The potion effect"
+						+ ChatColor.GOLD
+						+ ChatColor.ITALIC
+						+ " "
+						+ plugin.getConfig().getString(
+								"config.secondpot.effect") + " "
 						+ ChatColor.RESET + ChatColor.AQUA
 						+ "has been given to you for two minutes!"
 						+ ChatColor.WHITE);
