@@ -1,27 +1,53 @@
 #Default Configuration File For BetterAchievements
 #_____________________
-#EXAMPLE CONFIGURATION
+#EXAMPLE and DEFAULT CONFIGURATION
 #
 #config:
-#	frstpot:
-#		effect:JUMP
-#		time:2400  Time is in ticks.  1 tick  =  20 seconds      1200 tick  =  1 Minutes
-#		level:1
+#	message: "&b&lCongratulations &6&o%Player &r&b&l! You earned an achievement!"    Always put color before other chat formating. except &r that goes before colors!				
+#	firstpot:
+#		effect: JUMP
+#		time: 2400 Time is in ticks.  20 tick  =  1 seconds      1200 tick  = 1  Minute
+#		level: 1
 #	secondpot:
-#		effect:SPEED
-#		time:1200
-#		level:2
+#		effect: SPEED
+#		time: 1200
+#		level: 2
 #
 #	The level corresponds to the amplifier.
 #
+#   /!\ See below for sounds and potion effects names. /!\
 #
+#_____________
+#CONFIGURATION
+#
+
+
+
+config:
+    message: "&b&lCongratulations &6&o%name &r&b&l! You earned an achievement!"
+    firstpot:
+        effect: JUMP
+        time: 2400
+        level: 1
+    secondpot:
+        effect: SPEED
+        time: 1200
+        level: 2
+   
+    
+  
+        
+        
+#_____________
+# POTION EFFECTS
+#        
 #
 #
 #THE AVAILABLE POTION EFFECTS ARE THESES. PLEASE ONLY USE THESES.
 #
-#
+#===========================EFFECTS===========================
 #	ABSORPTION 
-#     	 		Increases the maximum health of an entity with health that cannot be regenerated, but is refilled every 30 seconds.
+#     	 		Increases the maximum health of an entity with health that cannot be regenerated, but is refilled every  seconds.
 #	BLINDNESS 
 #          		Blinds an entity.
 #	CONFUSION 
@@ -66,19 +92,3 @@
 #         		Decreases damage dealt by an entity.
 #	WITHER 
 #         		Deals damage to an entity over time and gives the health to the shooter.
-#
-#_____________
-#CONFIGURATION
-#
-
-
-
-config:
-    firstpot:
-        effect: JUMP
-        time: 2400
-        level: 1
-    secondpot:
-        effect: SPEED
-        time: 1200
-        level: 2
