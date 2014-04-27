@@ -21,16 +21,22 @@ public class Events implements Listener {
 
 	@EventHandler(priority = EventPriority.NORMAL)
 	public void onPlayerAchievementAwarded(PlayerAchievementAwardedEvent event) {
-
+		
+		
+		// location of played sound, goes with line 71 - DONE
+		
 		Location location = event.getPlayer().getLocation();
-		String name = event.getPlayer().getName();
 
-		event.getPlayer().sendMessage(
-				ChatColor.AQUA + "" + ChatColor.BOLD + "Congratulations"
-						+ ChatColor.GOLD + " " + name + ChatColor.AQUA + "!"
-						+ ChatColor.BOLD + " " + "You earned an achievement!"
-						+ ChatColor.WHITE);
-		event.getPlayer().playSound(location, Sound.LEVEL_UP, 10.0F, 0);
+		
+		// set name in config message, goest ith line 39 - DONE
+		
+		String name = event.getPlayer().getName();
+		String premessage = plugin.getConfig().getString("config.message");
+		String postmessage = premessage.replace("%Player", name);
+		String finalmessage = ChatColor.translateAlternateColorCodes('&',postmessage);
+
+		
+		event.getPlayer().sendMessage(finalmessage);
 		event.getPlayer().addPotionEffect(
 				new PotionEffect(PotionEffectType.getByName(plugin.getConfig()
 						.getString("config.firstpot.effect")), plugin
@@ -63,5 +69,6 @@ public class Events implements Listener {
 						+ ChatColor.RESET + ChatColor.AQUA
 						+ "has been given to you for two minutes!"
 						+ ChatColor.WHITE);
+		event.getPlayer().playSound(location, Sound.LEVEL_UP, 1, 0);
 	}
 }
