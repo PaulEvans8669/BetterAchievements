@@ -1,7 +1,9 @@
 package com.gmail.amatokus8669.plugin.betterachievements;
 
 import java.util.logging.Logger;
+
 import net.milkbowl.vault.economy.Economy;
+
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.RegisteredServiceProvider;
