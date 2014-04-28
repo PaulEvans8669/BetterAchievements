@@ -8,14 +8,20 @@
 #		effect: JUMP
 #		time: 2400 Time is in ticks.  20 tick  =  1 seconds      1200 tick  = 1  Minute
 #		level: 1
+#        message: "&bHey &6%Player ,&bthe effect %Effect is for you!"
 #	secondpot:
 #		effect: SPEED
 #		time: 1200
-#		level: 2
+#        message: "&bSo as this one:&6 %Effect"
 #
 #	The level corresponds to the amplifier.
 #
 #   /!\ See below for sounds and potion effects names. /!\
+#
+#
+#
+#Available variables are:  %Player, to get the players name; %Effect, to get the effect names.
+#
 #
 #_____________
 #CONFIGURATION
@@ -24,15 +30,17 @@
 
 
 config:
-    message: "&b&lCongratulations &6&o%name &r&b&l! You earned an achievement!"
+    message: "&b&lCongratulations &6&o%Player &r&b&l! You earned an achievement!"
     firstpot:
         effect: JUMP
         time: 2400
         level: 1
+        message: "&bHey &6%Player ,&bthe effect %Effect is for you!"
     secondpot:
         effect: SPEED
         time: 1200
         level: 2
+        message: "&bSo as this one:&6 %Effect"
    
     
   
