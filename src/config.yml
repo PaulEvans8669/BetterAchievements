@@ -8,11 +8,11 @@
 #		effect: JUMP
 #		time: 2400 Time is in ticks.  20 tick  =  1 seconds      1200 tick  = 1  Minute
 #		level: 1
-#        message: "&bHey &6%Player ,&bthe effect %Effect is for you!"
+#       message: "&bHey &6%Player ,&bthe effect %Effect is for you!"
 #	secondpot:
 #		effect: SPEED
 #		time: 1200
-#        message: "&bSo as this one:&6 %Effect"
+#       message: "&bSo as this one:&6 %Effect"
 #
 #	The level corresponds to the amplifier.
 #
