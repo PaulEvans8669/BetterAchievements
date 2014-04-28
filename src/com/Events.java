@@ -21,22 +21,36 @@ public class Events implements Listener {
 
 	@EventHandler(priority = EventPriority.NORMAL)
 	public void onPlayerAchievementAwarded(PlayerAchievementAwardedEvent event) {
-		
-		
+
+
 		// location of played sound, goes with line 71 - DONE
-		
+
 		Location location = event.getPlayer().getLocation();
 
-		
+
 		// set name in config message, goest ith line 39 - DONE
-		
+
 		String name = event.getPlayer().getName();
 		String premessage = plugin.getConfig().getString("config.message");
 		String postmessage = premessage.replace("%Player", name);
 		String finalmessage = ChatColor.translateAlternateColorCodes('&',postmessage);
-
 		
+		String fe = plugin.getConfig().getString("config.firstpot.effect");
+		String prefpm = plugin.getConfig().getString("config.firstpot.message");
+		String postfpm = prefpm.replace("%Player", name);
+		String postpostfpm = postfpm.replace("%Effect", fe);
+		String finalfpm = ChatColor.translateAlternateColorCodes('&',postpostfpm);
+		
+		String se = plugin.getConfig().getString("config.secondpot.effect");
+		String prespm = plugin.getConfig().getString("config.secondpot.message");
+		String postspm = prespm.replace("%Player", name);
+		String postpostspm = postspm.replace("%Effect", se);
+		String finalspm = ChatColor.translateAlternateColorCodes('&',postpostspm);
+
+
 		event.getPlayer().sendMessage(finalmessage);
+		event.getPlayer().sendMessage(finalfpm);
+		event.getPlayer().sendMessage(finalspm);
 		event.getPlayer().addPotionEffect(
 				new PotionEffect(PotionEffectType.getByName(plugin.getConfig()
 						.getString("config.firstpot.effect")), plugin
@@ -47,28 +61,6 @@ public class Events implements Listener {
 						.getString("config.secondpot.effect")), plugin
 						.getConfig().getInt("config.secondpot.time"), plugin
 						.getConfig().getInt("config.secondpot.level")));
-		event.getPlayer().sendMessage(
-				ChatColor.AQUA
-						+ "The potion effect"
-						+ ChatColor.GOLD
-						+ ChatColor.ITALIC
-						+ " "
-						+ plugin.getConfig()
-								.getString("config.firstpot.effect") + " "
-						+ ChatColor.RESET + ChatColor.AQUA
-						+ "has been given to you for two minutes!"
-						+ ChatColor.WHITE);
-		event.getPlayer().sendMessage(
-				ChatColor.AQUA
-						+ "The potion effect"
-						+ ChatColor.GOLD
-						+ ChatColor.ITALIC
-						+ " "
-						+ plugin.getConfig().getString(
-								"config.secondpot.effect") + " "
-						+ ChatColor.RESET + ChatColor.AQUA
-						+ "has been given to you for two minutes!"
-						+ ChatColor.WHITE);
 		event.getPlayer().playSound(location, Sound.LEVEL_UP, 1, 0);
 	}
 }
