@@ -1,4 +1,4 @@
 name: BetterAchievement
 main: com.gmail.amatokus8669.plugin.betterachievements.Main
-version: 1.0.1
+version: 1.1.0
 soft-depend: [Vault]
